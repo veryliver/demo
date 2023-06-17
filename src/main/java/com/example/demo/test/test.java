@@ -95,18 +95,6 @@ public class test {
                 }
             };
 
-            // // 添加需要自动引入的类的导入语句
-            // List<String> importStatements = new ArrayList<>();
-            // importStatements.add("import java.util.Set;");
-            // importStatements.add("import java.util.HashSet;");
-
-            // // 拼接需要引入的类的导入语句到代码字符串的开头
-            // StringBuilder modifiedCode = new StringBuilder();
-            // for (String importStatement : importStatements) {
-            // modifiedCode.append(importStatement).append("\n");
-            // }
-            // modifiedCode.append(code);
-
             // 解析代码字符串
             CompilationUnit compilationUnit = StaticJavaParser.parse(code);
 
@@ -150,7 +138,6 @@ public class test {
 
             // 重新生成修改后的代码字符串
             String modifiedCode = compilationUnit.toString();
-            System.out.println(modifiedCode);
 
             // 创建编译任务，并传递诊断信息收集器
             JavaCompiler.CompilationTask task = compiler.getTask(null, javaFileManager, diagnosticCollector, null, null,
@@ -200,7 +187,7 @@ public class test {
                                     System.out.println(result);
                                 }
                             } else {
-                                System.out.println("结果为 null。");
+                                System.out.println("结果为 null");
                             }
                             break;
                         }

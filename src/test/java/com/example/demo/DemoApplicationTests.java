@@ -28,7 +28,7 @@ class DemoApplicationTests {
 				"}";
 
 		// Object[] data = { "babad" };
-		String[] stringArray = { "2,4,3", "5,6,4" };
+		String[] stringArray = { "2,7,11,15", "9" };
 		Object[] data = autoObject.generateObjectArray(stringArray);
 		testFunction.compileAndRunCode(code, data);
 	}
